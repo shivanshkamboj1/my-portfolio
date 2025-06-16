@@ -4,7 +4,7 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
-
+import LeetcodeStats from "./Leetcode";
 function Home() {
   return (
     <section>
@@ -41,6 +41,7 @@ function Home() {
           </Row>
         </Container>
       </Container>
+      <LeetcodeStats />
       <Home2 />
     </section>
   );

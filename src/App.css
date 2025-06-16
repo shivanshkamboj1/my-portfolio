@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+.leetcode-section {
+  padding: 60px 0;
+}
+
+.leetcode-circles .CircularProgressbar {
+  font-size: 12px;
+}
+
+.project-heading {
+  font-size: 2.3rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.purple {
+  color: #6c63ff;
+  font-weight: bold;
+}
