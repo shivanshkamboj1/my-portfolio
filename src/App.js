@@ -27,22 +27,19 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-  useEffect(()=>{
-    async function fetchi(){
-      const ipRes = await fetch('https://api.ipify.org?format=json');
-      const { ip } = await ipRes.json();
-      const backendRes = await fetch('https://visitorapis.vercel.app/api/visitor', {
+  useEffect(() => {
+    async function trackVisitor() {
+      try {
+        await fetch('https://visitorapis.vercel.app/api/visitor', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ ip }),
         });
-
-        const data = await backendRes.json();
+      } catch (err) {
+        console.error('❌ Visitor tracking failed:', err);
+      }
     }
-    fetchi()
-  },[])
+
+    trackVisitor();
+  }, []);
   return (
     <Router>
       <Preloader load={load} />
