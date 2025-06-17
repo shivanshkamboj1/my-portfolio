@@ -14,7 +14,6 @@ function ProjectCards(props) {
         {props.description}
       </Card.Text>
 
-      {/* Spacer to push buttons to the bottom */}
       <div className="mt-auto d-flex justify-content-center">
         <Button variant="primary" href={props.ghLink} target="_blank">
           <BsGithub /> &nbsp;

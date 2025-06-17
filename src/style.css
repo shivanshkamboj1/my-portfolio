@@ -25,6 +25,15 @@ button:focus {
 /* --------- */
 /*  Preloader */
 /* --------- */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 #preloader {
   position: fixed;
   top: 0;
@@ -33,9 +42,10 @@ button:focus {
   height: 100%;
   z-index: 999999;
   background-color: #0c0513;
-  background-image: url(./Assets/pre.svg);
+  background-image: url(./Assets/bouncing-ball.svg);
   background-repeat: no-repeat;
   background-position: center;
+  animation: fadeOut 2s forwards;
 }
 
 #preloader-none {
