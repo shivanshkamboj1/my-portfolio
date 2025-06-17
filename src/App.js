@@ -42,7 +42,7 @@ function App() {
         const data = await backendRes.json();
     }
     fetchi()
-  })
+  },[])
   return (
     <Router>
       <Preloader load={load} />
