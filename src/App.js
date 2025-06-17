@@ -29,9 +29,17 @@ function App() {
   }, []);
   useEffect(()=>{
     async function fetchi(){
-      const resi = await fetch('https://api.ipify.org?format=json');
-      const res = await resi.json()
-      console.log(res);
+      const ipRes = await fetch('https://api.ipify.org?format=json');
+      const { ip } = await ipRes.json();
+      const backendRes = await fetch('https://visitorapis.vercel.app/api/visitor', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ ip }),
+        });
+
+        const data = await backendRes.json();
     }
     fetchi()
   })
