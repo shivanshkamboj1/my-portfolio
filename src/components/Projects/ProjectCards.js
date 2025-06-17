@@ -8,21 +8,20 @@ function ProjectCards(props) {
   return (
     <Card className="project-card-view">
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
-      <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
-        </Card.Text>
+    <Card.Body className="d-flex flex-column">
+      <Card.Title>{props.title}</Card.Title>
+      <Card.Text style={{ textAlign: "justify" }}>
+        {props.description}
+      </Card.Text>
+
+      {/* Spacer to push buttons to the bottom */}
+      <div className="mt-auto d-flex justify-content-center">
         <Button variant="primary" href={props.ghLink} target="_blank">
           <BsGithub /> &nbsp;
           {props.isBlog ? "Blog" : "GitHub"}
         </Button>
-        {"\n"}
-        {"\n"}
 
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-
-        {!props.isBlog && props.demoLink && (
+        {props.demoLink && (
           <Button
             variant="primary"
             href={props.demoLink}
@@ -30,10 +29,12 @@ function ProjectCards(props) {
             style={{ marginLeft: "10px" }}
           >
             <CgWebsite /> &nbsp;
-            {"Demo"}
+            Demo
           </Button>
         )}
-      </Card.Body>
+      </div>
+    </Card.Body>
+
     </Card>
   );
 }
