@@ -17,7 +17,7 @@ function LeetcodeStats() {
       .then((data) => {
         setStats(data);
         setLoading(false);
-        console.log(data)
+        // console.log(data)
       })
       .catch((err) => {
         console.error("LeetCode fetch failed:", err);
@@ -78,7 +78,8 @@ function LeetcodeStats() {
                     value={(item.value / item.total) * 100}
                     text={`${item.value}`}
                     styles={circleTheme(item.color)}
-                  />{item.total}
+                  />
+                  {/* {item.total} */}
                 </div>
               </Col>
             ))}
