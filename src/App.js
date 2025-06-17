@@ -27,7 +27,14 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-
+  useEffect(()=>{
+    async function fetchi(){
+      const resi = await fetch('https://api.ipify.org?format=json');
+      const res = await resi.json()
+      console.log(res);
+    }
+    fetchi()
+  })
   return (
     <Router>
       <Preloader load={load} />
