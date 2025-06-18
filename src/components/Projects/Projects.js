@@ -5,6 +5,7 @@ import Particle from "../Particle";
 
 import sb from "../../Assets/Projects/sb.png";
 import Medicare from "../../Assets/Projects/blog.png";
+import tindev from "../../Assets/Projects/tindev.png";
 
 const projectDetail =[
   {
@@ -19,6 +20,13 @@ const projectDetail =[
     title:"Medicare",
     description:"Medicare is a full-stack web application where patients can book appointments with doctors online. Users can view doctor profiles, check availability, and schedule consultations easily. The platform integrates Razorpay for secure and seamless online payments. Both doctors and patients have dedicated dashboards to manage appointments and view details. It’s built using React.js, Node.js, Express.js, and MongoDB for a smooth and responsive experience.",
     ghLink:"https://github.com/shivanshkamboj1/Medicare",
+    demoLink:"https://medicare-jmit.vercel.app/"
+  },
+  {
+    img:tindev,
+    title:"Tin-dev",
+    description:"Tindev is a developer matchmaking platform inspired by Tinder, designed to help coders connect with like-minded peers. Users can swipe to discover random developers based on skills, interests, or location. When two developers like each other, they form a match and can start chatting instantly. The platform supports real-time messaging for collaboration, networking, or mentorship. Tindev aims to build a global community where developers can find partners for projects, learning, or fun.",
+    ghLink:"https://github.com/shivanshkamboj1/Tin-Dev",
     demoLink:"https://medicare-jmit.vercel.app/"
   },
 ]
