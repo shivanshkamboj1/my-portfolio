@@ -5,6 +5,8 @@ import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import LeetcodeStats from "./Leetcode";
+import Chat from "./Chat";
+
 function Home() {
   return (
     <section>
@@ -41,6 +43,7 @@ function Home() {
           </Row>
         </Container>
       </Container>
+      <Chat/>
       <LeetcodeStats />
       <Home2 />
     </section>

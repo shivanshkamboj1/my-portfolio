@@ -1,0 +1,84 @@
+/* Chat Background matches dark space look */
+.chat-bg {
+  min-height: 20vh;
+  color: #fff;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 1rem;
+}
+
+.chat-box {
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+
+/* Purple accent used throughout */
+.text-purple {
+  color: #9b59b6 !important;
+}
+
+.btn-purple {
+  background-color: #9b59b6;
+  border-color: #9b59b6;
+}
+
+.btn-purple:hover {
+  background-color: #8e44ad;
+  border-color: #8e44ad;
+}
+
+
+
+/* Input styling to match dark theme */
+.input-dark {
+  background-color: #2c2c2c;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.input-dark::placeholder {
+  color: #aaa;
+}
+
+.chat-bubble {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 18px;
+  font-size: 1rem;
+  word-wrap: break-word;
+  background-color: #444;
+  color: #eee;
+  /* width: min(fit-content, 45%); */
+  max-width: 45%;
+  text-align: left;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+
+.chat-bubble.left {
+  background-color: #444;
+  color: #eee;
+  border-top-left-radius: 4px;
+  max-width: 45%;
+}
+
+.chat-bubble.right {
+  background-color: #9b59b6;
+  color: #fff;
+  border-top-right-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .chat-bubble {
+    max-width: 70%;
+  }
+}
