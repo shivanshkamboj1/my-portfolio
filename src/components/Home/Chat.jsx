@@ -34,7 +34,7 @@ const Chat = () => {
     setInput("");
 
     try {
-      const result = await axios.post("http://localhost:4000/api/room/ai", {
+      const result = await axios.post("https://visitorapis.vercel.app/api/room/ai", {
         message: userInput,
       });
       console.log(result);
