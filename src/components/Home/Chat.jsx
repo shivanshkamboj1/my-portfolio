@@ -11,17 +11,11 @@ const Chat = () => {
   ]);
   const [input, setInput] = useState("");
   const bottomRef = useRef(null);
-  const topRef = useRef(null);
 
-  // Auto-scroll when messages change
+  // Auto-scroll exactly to the last message
   useEffect(() => {
     if (bottomRef.current) {
       bottomRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [message]);
-  useEffect(() => {
-    if (topRef.current) {
-      topRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [message]);
 
@@ -34,9 +28,10 @@ const Chat = () => {
     setInput("");
 
     try {
-      const result = await axios.post("https://visitorapis.vercel.app/api/room/ai", {
-        message: userInput,
-      });
+      const result = await axios.post(
+        "https://visitorapis.vercel.app/api/room/ai",
+        { message: userInput }
+      );
       console.log(result);
       setMessage((prev) => [...prev, result.data.message]);
     } catch (error) {
@@ -50,8 +45,7 @@ const Chat = () => {
   return (
     <div className="chat-bg py-5">
       <Container className="chat-container rounded shadow-lg p-4">
-        <h2 className="text-center mb-4 text-purple"  ref={topRef}>Shivansh AI Assistant</h2>
-        <div></div>
+        <h2 className="text-center mb-4 text-purple">Shivansh AI Assistant</h2>
         <div className="chat-box mb-4">
           {message.map((msg, index) => (
             <Row
